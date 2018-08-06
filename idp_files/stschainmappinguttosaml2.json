@@ -1,0 +1,111 @@
+{
+	"validateRequests": false,
+	"chainId": "uuid31262d4a-f560-4517-a65a-21cb8cda41f9",
+	"issuer": {
+		"address": "http:\/\/issuer\/username"
+	},
+	"doIntrospection": false,
+	"description": "Chain for usernametoken to saml20",
+	"appliesTo": {
+		"address": "http:\/\/appliesto\/saml20"
+	},
+	"name": "UsernameTokenToSAML20Chain",
+	"isDynamic": false,
+	"sendValidationConfirmation": false,
+	"requestType": "http:\/\/schemas.xmlsoap.org\/ws\/2005\/02\/trust\/Validate",
+	"properties": {
+		"partner": [{
+			"name": "ut-uuid-str.username.validate.freshness",
+			"value": ["false"]
+		},
+		{
+			"name": "saml2-uuid-str.com.tivoli.am.fim.sts.saml.2.0.assertion.attribute.types",
+			"value": ["*"]
+		},
+		{
+			"name": "saml2-uuid-str.com.tivoli.am.fim.sts.saml.2.0.assertion.sign",
+			"value": ["true"]
+		},
+		{
+			"name": "saml2-uuid-str.com.tivoli.am.fim.sts.saml.2.0.SigningKeyIdentifier.db",
+			"value": ["myidpkeys"]
+		},
+		{
+			"name": "saml2-uuid-str.com.tivoli.am.fim.sts.saml.2.0.SigningKeyIdentifier.cert",
+			"value": ["myidpkey"]
+		},
+		{
+			"name": "saml2-uuid-str.com.tivoli.am.fim.sts.saml.2.0.SignatureAlgorithm",
+			"value": ["RSA-SHA512"]
+		},
+		{
+			"name": "saml2-uuid-str.com.tivoli.am.fim.sts.saml.2.0.WantMultipleAttributeStatements",
+			"value": ["false"]
+		},
+		{
+			"name": "saml2-uuid-str.com.tivoli.am.fim.sts.saml.2.0.assertion.signature.include.cert.data",
+			"value": ["true"]
+		},
+		{
+			"name": "saml2-uuid-str.com.tivoli.am.fim.sts.saml.2.0.assertion.signature.include.public.key",
+			"value": ["false"]
+		},
+		{
+			"name": "saml2-uuid-str.com.tivoli.am.fim.sts.saml.2.0.assertion.signature.include.subject.name",
+			"value": ["false"]
+		},
+		{
+			"name": "saml2-uuid-str.com.tivoli.am.fim.sts.saml.2.0.assertion.signature.include.subject.keyid",
+			"value": ["false"]
+		},
+		{
+			"name": "saml2-uuid-str.com.tivoli.am.fim.sts.saml.2.0.assertion.signature.include.issuer.details",
+			"value": ["false"]
+		}],
+		"self": [{
+			"name": "ut-uuid-str.username.skip.password.validation",
+			"value": ["false"]
+		},
+		{
+			"name": "ut-uuid-str.username.password.validator",
+			"value": ["TAMRD"]
+		},
+		{
+			"name": "ut-uuid-str.username.server.connection.id",
+			"value": ["localldap"]
+		},
+		{
+			"name": "ut-uuid-str.username.tamrd.management.domain",
+			"value": ["Default"]
+		},
+		{
+			"name": "ut-uuid-str.username.tamrd.use.federated.directories.config",
+			"value": ["false"]
+		},
+		{
+			"name": "ut-uuid-str.username.tamrd.login.failures.persistent",
+			"value": ["false"]
+		},
+		{
+			"name": "ut-uuid-str.username.tamrd.maximum.server.connections",
+			"value": ["16"]
+		},
+		{
+			"name": "map-uuid-str.map.rule.reference.ids",
+			"value": ["mapRuleReference"]
+		},
+		{
+			"name": "saml2-uuid-str.com.tivoli.am.fim.sts.saml.2.0.assertion.issuer",
+			"value": ["https:\/\/www.myidp.ibm.com\/isam\/sps\/saml20idp\/saml20"]
+		},
+		{
+			"name": "saml2-uuid-str.com.tivoli.am.fim.sts.saml.2.0.assertion.pretime.valid",
+			"value": ["3600"]
+		},
+		{
+			"name": "saml2-uuid-str.com.tivoli.am.fim.sts.saml.2.0.assertion.posttime.valid",
+			"value": ["3600"]
+		}]
+	},
+	"signResponses": false
+}

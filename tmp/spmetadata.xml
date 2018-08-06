@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?><md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://www.mysp.ibm.com/isam/sps/saml20sp/saml20">
+<md:SPSSODescriptor AuthnRequestsSigned="true" WantAssertionsSigned="true" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+<md:KeyDescriptor use="signing">
+<KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+<X509Data>
+<X509Certificate>MIIB2TCCAUKgAwIBAgIIHXdqNC25iecwDQYJKoZIhvcNAQEFBQAwLzELMAkGA1UEBhMCdXMxETAPBgNVBAoTCHRlc3Rvbmx5MQ0wCwYDVQQDEwRteXNwMB4XDTE2MDQyNzEyMTkxOFoXDTI2MDQyNjEyMTkxOFowLzELMAkGA1UEBhMCdXMxETAPBgNVBAoTCHRlc3Rvbmx5MQ0wCwYDVQQDEwRteXNwMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDMR6+V0HPR5HQ7DN3D99vWsc/eMWX9B/pWQwVnzjKSrbY6FLEzdUiDFPEWPm/WQX/XU8nf9v9zXYLjmrVE8a3kAIC+KOxkuV5dteJFe3yyiWo03oqTdf1LzT9o6JvvOtwinG5WgSVNOp6/1SoF2uVtEyH57XWkG57rLe9k9uh2AQIDAQABMA0GCSqGSIb3DQEBBQUAA4GBAMZiCRHGV3elFl/Ux6sZKB1yZflyJMD/wRoHqBudL/snIyzBOPs0aFT4r4JYW5/WkNXJjRNa4tAmtRt7Wl1CaISurJOeiL8cjb8dnb5O47IYfRJLPF9lzxqjA8LRXDA6/dywwDG0VvG3lnj9DYBlGuDVLgff9ANg2jU1Yp1IlONS</X509Certificate>
+</X509Data>
+</KeyInfo>
+</md:KeyDescriptor>
+<md:KeyDescriptor use="encryption">
+<KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+<X509Data>
+<X509Certificate>MIIB2TCCAUKgAwIBAgIIHXdqNC25iecwDQYJKoZIhvcNAQEFBQAwLzELMAkGA1UEBhMCdXMxETAPBgNVBAoTCHRlc3Rvbmx5MQ0wCwYDVQQDEwRteXNwMB4XDTE2MDQyNzEyMTkxOFoXDTI2MDQyNjEyMTkxOFowLzELMAkGA1UEBhMCdXMxETAPBgNVBAoTCHRlc3Rvbmx5MQ0wCwYDVQQDEwRteXNwMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDMR6+V0HPR5HQ7DN3D99vWsc/eMWX9B/pWQwVnzjKSrbY6FLEzdUiDFPEWPm/WQX/XU8nf9v9zXYLjmrVE8a3kAIC+KOxkuV5dteJFe3yyiWo03oqTdf1LzT9o6JvvOtwinG5WgSVNOp6/1SoF2uVtEyH57XWkG57rLe9k9uh2AQIDAQABMA0GCSqGSIb3DQEBBQUAA4GBAMZiCRHGV3elFl/Ux6sZKB1yZflyJMD/wRoHqBudL/snIyzBOPs0aFT4r4JYW5/WkNXJjRNa4tAmtRt7Wl1CaISurJOeiL8cjb8dnb5O47IYfRJLPF9lzxqjA8LRXDA6/dywwDG0VvG3lnj9DYBlGuDVLgff9ANg2jU1Yp1IlONS</X509Certificate>
+</X509Data>
+</KeyInfo>
+<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#rsa-1_5"/>
+</md:KeyDescriptor>
+<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://www.mysp.ibm.com/isam/sps/saml20sp/saml20/soap" index="0" isDefault="true"/>
+<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://www.mysp.ibm.com/isam/sps/saml20sp/saml20/slo"/>
+<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://www.mysp.ibm.com/isam/sps/saml20sp/saml20/slo"/>
+<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://www.mysp.ibm.com/isam/sps/saml20sp/saml20/slo"/>
+<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://www.mysp.ibm.com/isam/sps/saml20sp/saml20/soap"/>
+<md:ManageNameIDService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://www.mysp.ibm.com/isam/sps/saml20sp/saml20/mnids"/>
+<md:ManageNameIDService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://www.mysp.ibm.com/isam/sps/saml20sp/saml20/mnids"/>
+<md:ManageNameIDService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://www.mysp.ibm.com/isam/sps/saml20sp/saml20/mnids"/>
+<md:ManageNameIDService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://www.mysp.ibm.com/isam/sps/saml20sp/saml20/soap"/>
+<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress</md:NameIDFormat>
+<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://www.mysp.ibm.com/isam/sps/saml20sp/saml20/login" index="0" isDefault="true"/>
+<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://www.mysp.ibm.com/isam/sps/saml20sp/saml20/login" index="1"/>
+<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://www.mysp.ibm.com/isam/sps/saml20sp/saml20/login" index="2"/>
+</md:SPSSODescriptor>
+<md:Organization>
+<md:OrganizationName xml:lang="en">SP Company</md:OrganizationName>
+<md:OrganizationDisplayName xml:lang="en">SP Company</md:OrganizationDisplayName>
+<md:OrganizationURL xml:lang="en"/>
+</md:Organization>
+</md:EntityDescriptor>

@@ -1,0 +1,84 @@
+{
+	"name": "IVCredToSAML20Chain",
+	"description": "Description of IVCred To SAML20 Chain",
+	"chainId": "ChainTemplateId",
+	"signResponses": false,
+	"isDynamic": false,
+	"sendValidationConfirmation": false,
+	"requestType": "http://docs.oasis-open.org/ws-sx/ws-trust/200512/Issue",
+	"tokenType": "http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV2.0",
+	"doIntrospection": false,
+	"validateRequests": false,
+	"appliesTo": {
+		"address": "http://appliesto/saml20"
+	},
+	"issuer": {
+		"address": "amwebrte-sts-client"
+	},
+	"properties": {
+		"partner": [{
+			"name": "ivc-uuid-str.ivcred.verify.signatures",
+			"value": ["false"]
+		},
+		{
+			"name": "saml-uuid-str.com.tivoli.am.fim.sts.saml.2.0.assertion.attribute.types",
+			"value": ["*"]
+		},
+		{
+			"name": "saml-uuid-str.com.tivoli.am.fim.sts.saml.2.0.assertion.sign",
+			"value": ["true"]
+		},
+		{
+			"name": "saml-uuid-str.com.tivoli.am.fim.sts.saml.2.0.SigningKeyIdentifier.db",
+			"value": ["myidpkeys"]
+		},
+		{
+			"name": "saml-uuid-str.com.tivoli.am.fim.sts.saml.2.0.SigningKeyIdentifier.cert",
+			"value": ["myidpkey"]
+		},
+		{
+			"name": "saml-uuid-str.com.tivoli.am.fim.sts.saml.2.0.WantMultipleAttributeStatements",
+			"value": ["false"]
+		},
+		{
+			"name": "saml-uuid-str.com.tivoli.am.fim.sts.saml.2.0.assertion.signature.include.cert.data",
+			"value": ["true"]
+		},
+		{
+			"name": "saml-uuid-str.com.tivoli.am.fim.sts.saml.2.0.assertion.signature.include.public.key",
+			"value": ["false"]
+		},
+		{
+			"name": "saml-uuid-str.com.tivoli.am.fim.sts.saml.2.0.assertion.signature.include.subject.name",
+			"value": ["false"]
+		},
+		{
+			"name": "saml-uuid-str.com.tivoli.am.fim.sts.saml.2.0.assertion.signature.include.subject.keyid",
+			"value": ["false"]
+		},
+		{
+			"name": "saml-uuid-str.com.tivoli.am.fim.sts.saml.2.0.assertion.signature.include.issuer.details",
+			"value": ["false"]
+		}],
+		"self": [{
+			"name": "map-uuid-str.map.rule.type",
+			"value": ["JAVASCRIPT"]
+		},
+		{
+			"name": "map-uuid-str.map.rule.reference.ids",
+			"value": ["mapJsRuleReference"]
+		},
+		{
+			"name": "saml-uuid-str.com.tivoli.am.fim.sts.saml.2.0.assertion.issuer",
+			"value": ["https://www.myidp.ibm.com/isam/sps/saml20idp/saml20"]
+		},
+		{
+			"name": "saml-uuid-str.com.tivoli.am.fim.sts.saml.2.0.assertion.pretime.valid",
+			"value": ["3600"]
+		},
+		{
+			"name": "saml-uuid-str.com.tivoli.am.fim.sts.saml.2.0.assertion.posttime.valid",
+			"value": ["3600"]
+		}]
+	}
+}

@@ -1,0 +1,118 @@
+{
+	"validateRequests": false,
+	"chainId": "uuid693efbd0-8a34-46b1-bdb3-baf021308c30",
+	"issuer": {
+		"address": "http:\/\/issuer\/saml20"
+	},
+	"doIntrospection": false,
+	"description": "Chain for saml20 to saml20",
+	"appliesTo": {
+		"address": "http:\/\/appliesto\/saml20"
+	},
+	"name": "SAML20ToSAML20Chain",
+	"isDynamic": false,
+	"sendValidationConfirmation": false,
+	"requestType": "http:\/\/schemas.xmlsoap.org\/ws\/2005\/02\/trust\/Validate",
+	"properties": {
+		"partner": [{
+			"name": "saml2v-uuid-str.com.tivoli.am.fim.sts.saml.2.0.assertion.verify.signatures",
+			"value": ["true"]
+		},
+          {
+			"name": "saml2v-uuid-str.com.tivoli.am.fim.sts.saml.2.0.assertion.keystore.alias",
+			"value": ["true"]
+		},
+
+        {
+			"name": "saml2v-uuid-str.com.tivoli.am.fim.sts.saml.2.0.WantMultipleAttributeStatements",
+			"value": ["false"]
+		},
+        {
+			"name": "saml2v-uuid-str.com.tivoli.am.fim.sts.saml.2.0.assertion.default.nameidformat",
+			"value": ["urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress"]
+		},
+          {
+			"name": "saml2v-uuid-str.com.tivoli.am.fim.sts.saml.2.0.DecryptionKeyIdentifier.db",
+			"value": ["myidpkeys"]
+		},
+		{
+			"name": "saml2v-uuid-str.com.tivoli.am.fim.sts.saml.2.0.DecryptionKeyIdentifier.cert",
+			"value": ["myidpkey"]
+		},
+		{
+			"name": "saml2v-uuid-str.com.tivoli.am.fim.sts.saml.2.0.map.unknown.alias",
+			"value": ["false"]
+		},
+		{
+			"name": "saml2v-uuid-str.com.tivoli.am.fim.sts.saml.2.0.ValidateKeyIdentifier.db",
+			"value": ["myidpkeys"]
+		},
+		{
+			"name": "saml2v-uuid-str.com.tivoli.am.fim.sts.saml.2.0.ValidateKeyIdentifier.cert",
+			"value": ["myidpkey"]
+		},
+		{
+			"name": "saml2i-uuid-str.com.tivoli.am.fim.sts.saml.2.0.assertion.attribute.types",
+			"value": ["*"]
+		},
+		{
+			"name": "saml2i-uuid-str.com.tivoli.am.fim.sts.saml.2.0.assertion.sign",
+			"value": ["true"]
+		},
+		{
+			"name": "saml2i-uuid-str.com.tivoli.am.fim.sts.saml.2.0.SigningKeyIdentifier.db",
+			"value": ["myidpkeys"]
+		},
+		{
+			"name": "saml2i-uuid-str.com.tivoli.am.fim.sts.saml.2.0.SigningKeyIdentifier.cert",
+			"value": ["myidpkey"]
+		},
+		{
+			"name": "saml2i-uuid-str.com.tivoli.am.fim.sts.saml.2.0.WantMultipleAttributeStatements",
+			"value": ["false"]
+		},
+		{
+			"name": "saml2i-uuid-str.com.tivoli.am.fim.sts.saml.2.0.assertion.signature.include.cert.data",
+			"value": ["true"]
+		},
+		{
+			"name": "saml2i-uuid-str.com.tivoli.am.fim.sts.saml.2.0.assertion.signature.include.public.key",
+			"value": ["false"]
+		},
+		{
+			"name": "saml2i-uuid-str.com.tivoli.am.fim.sts.saml.2.0.assertion.signature.include.subject.name",
+			"value": ["false"]
+		},
+		{
+			"name": "saml2i-uuid-str.com.tivoli.am.fim.sts.saml.2.0.assertion.signature.include.subject.keyid",
+			"value": ["false"]
+		},
+
+		{
+			"name": "saml2i-uuid-str.com.tivoli.am.fim.sts.saml.2.0.assertion.signature.include.issuer.details",
+			"value": ["false"]
+		}],
+		"self": [
+		{
+			"name": "saml2v-uuid-str.com.tivoli.am.fim.sts.saml.2.0.assertion.replay.validation",
+			"value": ["false"]
+		},
+		{
+			"name": "map-uuid-str.map.rule.reference.ids",
+			"value": ["mapRuleReference"]
+		},
+		{
+			"name": "saml2i-uuid-str.com.tivoli.am.fim.sts.saml.2.0.assertion.issuer",
+			"value": ["https:\/\/www.myidp.ibm.com\/newissuer"]
+		},
+		{
+			"name": "saml2i-uuid-str.com.tivoli.am.fim.sts.saml.2.0.assertion.pretime.valid",
+			"value": ["60"]
+		},
+		{
+			"name": "saml2i-uuid-str.com.tivoli.am.fim.sts.saml.2.0.assertion.posttime.valid",
+			"value": ["60"]
+		}]
+	},
+	"signResponses": false
+}

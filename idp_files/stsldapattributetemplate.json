@@ -1,0 +1,30 @@
+{
+	"id": "dummyvalue",
+	"description": "Maps from STSUU to another STSUU reading in LDAP attributes",
+	"name": "STSUULDAPAttributeMapper",
+	"chainItems": [{
+		"id": "default-stsuu",
+		"prefix": "481541e2-c98a-4410-a1e3-cc922eecf299",
+		"mode": "validate"
+	},
+	{
+		"id": "default-map",
+		"prefix": "ad993477-7112-48fb-a1c4-e4a737af069f",
+		"mode": "map"
+	},
+	{
+		"id": "default-attr_map",
+		"prefix": "28b3cdf2-5570-4abd-ac2c-21f09bd77778",
+		"mode": "map"
+	},
+	{
+		"id": "default-map",
+		"prefix": "299d8693-b5c7-4905-a18d-af6e6c6df229",
+		"mode": "map"
+	},
+	{
+		"id": "default-stsuu",
+		"prefix": "01cc36be-f953-4056-a699-f322de7a2451",
+		"mode": "issue"
+	}]
+}

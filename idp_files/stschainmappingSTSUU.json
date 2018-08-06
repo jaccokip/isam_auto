@@ -1,0 +1,28 @@
+{
+	"validateRequests": false,
+	"chainId": "uuid9203615a-014f-1e2b-9b1d-eed9fa5e5169",
+	"issuer": {
+		"address": "http://issuer/stsuu"
+	},
+	"doIntrospection": false,
+	"description": "Basic chain mapping for stsuu mapper",
+	"appliesTo": {
+		"address": "http://appliesto/stsuu"
+	},
+	"name": "STSUUMapperChain",
+	"isDynamic": false,
+	"sendValidationConfirmation": false,
+	"requestType": "http://schemas.xmlsoap.org/ws/2005/02/trust/Validate",
+	"properties": {
+		"partner": [],
+		"self": [{
+			"name": "7e6c1aa3-2559-4552-a255-b30cbe446e1e.map.rule.type",
+			"value": ["JAVASCRIPT"]
+		},
+		{
+			"name": "7e6c1aa3-2559-4552-a255-b30cbe446e1e.map.rule.reference.ids",
+			"value": ["mapJsRuleReference"]
+		}]
+	},
+	"signResponses": false
+}

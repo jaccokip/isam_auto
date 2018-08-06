@@ -1,0 +1,19 @@
+{
+	"description": "Maps from SAML20 to SAML20",
+	"name": "SAML20ToSAML20",
+	"chainItems": [{
+		"id": "default-saml2_0",
+		"prefix": "e76da1ef-7814-4f67-9d6d-dcc73b597c5f",
+		"mode": "validate"
+	},
+	{
+		"id": "default-map",
+		"prefix": "8f440a79-26c2-4152-b470-a521b9963b8b",
+		"mode": "map"
+	},
+	{
+		"id": "default-saml2_0",
+		"prefix": "ed4edefd-d642-44ae-9d82-9d057ca5253b",
+		"mode": "issue"
+	}]
+}

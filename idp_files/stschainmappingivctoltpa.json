@@ -1,0 +1,56 @@
+{
+	"validateRequests": false,
+	"chainId": "uuid2dbfd5c4-515d-4733-ad7b-634502ba4049",
+	"tokenType": "http:\/\/www.ibm.com\/websphere\/appserver\/tokentype#LTPAv2",
+	"issuer": {
+		"address": "amwebrte-sts-client"
+	},
+	"doIntrospection": false,
+	"description": "Chain for IVCred to LTPA",
+	"appliesTo": {
+		"address": "http:\/\/appliesto\/ltpa"
+	},
+	"name": "IVCredToLTPAChain",
+	"isDynamic": false,
+	"sendValidationConfirmation": false,
+	"requestType": "http:\/\/docs.oasis-open.org\/ws-sx\/ws-trust\/200512\/Issue",
+	"properties": {
+		"partner": [{
+			"name": "ivc-uuid-str.ivcred.verify.signatures",
+			"value": ["false"]
+		}],
+		"self": [{
+			"name": "map-uuid-str.map.rule.type",
+			"value": ["JAVASCRIPT"]
+		},
+		{
+			"name": "map-uuid-str.map.rule.reference.ids",
+			"value": ["mapRuleReference"]
+		},
+		{
+			"name": "ltpa-uuid-str.ltpa.self.realm",
+			"value": ["testRealm"]
+		},
+		{
+			"name": "ltpa-uuid-str.ltpa.self.usefips",
+			"value": ["false"]
+		},
+		{
+			"name": "ltpa-uuid-str.ltpa.self.password",
+			"value": ["Passw0rd"]
+		},
+		{
+			"name": "ltpa-uuid-str.ltpa.self.filename",
+			"value": ["ltpasso.keys"]
+		},
+		{
+			"name": "ltpa-uuid-str.ltpa.self.version",
+			"value": ["2"]
+		},
+		{
+			"name": "ltpa-uuid-str.ltpa.self.extattr",
+			"value": ["*"]
+		}]
+	},
+	"signResponses": false
+}

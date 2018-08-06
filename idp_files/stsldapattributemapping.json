@@ -1,0 +1,40 @@
+{
+	"validateRequests": false,
+	"chainId": "uuidb7b022e4-014f-115e-a02b-829868d4380b",
+	"issuer": {
+		"address": "http://issuer/stsuu"
+	},
+	"doIntrospection": false,
+	"description": "Basic chain mapping for stsuu mapper",
+	"appliesTo": {
+		"address": "http://appliesto/stsuu"
+	},
+	"name": "STSUUMapperChain",
+	"isDynamic": false,
+	"sendValidationConfirmation": false,
+	"requestType": "http://schemas.xmlsoap.org/ws/2005/02/trust/Validate",
+	"properties": {
+		"partner": [{
+			"name": "map3-attr.attribute.mappings",
+			"value": ["phone_@phoneSource@",
+			"displayName_@displaySource@"]
+		}],
+		"self": [{
+			"name": "map1-uuid-str.map.rule.reference.ids",
+			"value": ["mapJsPRERuleReference"]
+		},
+		{
+			"name": "map1-uuid-str.map.rule.type",
+			"value": ["JAVASCRIPT"]
+		},
+		{
+			"name": "map2-uuid-str.map.rule.type",
+			"value": ["JAVASCRIPT"]
+		},
+		{
+			"name": "map2-uuid-str.map.rule.reference.ids",
+			"value": ["mapJsPOSTRuleReference"]
+		}]
+	},
+	"signResponses": false
+}

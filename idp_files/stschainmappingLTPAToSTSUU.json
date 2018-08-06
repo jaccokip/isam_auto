@@ -1,0 +1,40 @@
+{
+  "validateRequests": false,
+  "chainId": "uuidc56741a2-85f8-4cfb-b3ef-d462e9dff5a6",
+  "issuer": {
+    "address": "http://issuer/ltpa"
+  },
+  "doIntrospection": false,
+  "description": "Chain for ltpa to stsuu",
+  "appliesTo": {
+    "address": "http://appliesto/stsuu"
+  },
+  "name": "LTPAToSTSUUChain",
+  "isDynamic": false,
+  "sendValidationConfirmation": false,
+  "requestType": "http://schemas.xmlsoap.org/ws/2005/02/trust/Validate",
+  "properties": {
+    "partner": [
+      {
+        "name": "id-prefix.ltpa.partner.usefips",
+        "value": [
+          "false"
+        ]
+      },
+      {
+        "name": "id-prefix.ltpa.partner.password",
+        "value": [
+          "Passw0rd"
+        ]
+      },
+      {
+        "name": "id-prefix.ltpa.partner.filename",
+        "value": [
+          "ltpasso.keys"
+        ]
+      }
+    ],
+    "self": []
+  },
+  "signResponses": false
+}

@@ -1,0 +1,19 @@
+{
+	"description": "Maps from IVCred to LTPA",
+	"name": "IVCredToLTPAJunctionExample",
+	"chainItems": [{
+		"id": "default-ivc",
+		"prefix": "1c64bcd5-4816-4f33-b8f6-4c029cbf2dec",
+		"mode": "validate"
+	},
+	{
+		"id": "default-map",
+		"prefix": "ae152524-531d-4c2e-ba0e-ef5be8a6a995",
+		"mode": "map"
+	},
+	{
+		"id": "default-ltpa",
+		"prefix": "1079d909-7b91-4a59-a8fa-29539de2c98c",
+		"mode": "issue"
+	}]
+}

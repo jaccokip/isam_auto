@@ -1,0 +1,119 @@
+{
+	"configuration": {
+		"role": "sp",
+		"assertionConsumerService": [{
+			"default": true,
+			"index": 0,
+			"binding": "artifact",
+			"url": "https://www.mysp.ibm.com/isam/sps/saml20sp/saml20/login"
+		},
+		{
+			"default": false,
+			"index": 1,
+			"binding": "post",
+			"url": "https://www.mysp.ibm.com/isam/sps/saml20sp/saml20/login"
+		},
+		{
+			"default": false,
+			"index": 2,
+			"binding": "redirect",
+			"url": "https://www.mysp.ibm.com/isam/sps/saml20sp/saml20/login"
+		}],
+		"manageNameIDService": [{
+			"binding": "artifact",
+			"url": "https://www.mysp.ibm.com/isam/sps/saml20sp/saml20/mnids"
+		},
+		{
+			"binding": "post",
+			"url": "https://www.mysp.ibm.com/isam/sps/saml20sp/saml20/mnids"
+		},
+		{
+			"binding": "redirect",
+			"url": "https://www.mysp.ibm.com/isam/sps/saml20sp/saml20/mnids"
+		},
+		{
+			"binding": "soap",
+			"url": "https://www.mysp.ibm.com/isam/sps/saml20sp/saml20/soap"
+		}],
+		"signatureSettings": {
+			"validationOptions": {
+				"validateLogoutResponse": false,
+				"validateNameIDManagementRequest": false,
+				"validateAuthnRequest": true,
+				"validateNameIDManagementResponse": false,
+				"validateLogoutRequest": false,
+				"validateArtifactResponse": false,
+				"validateArtifactRequest": false
+			},
+			"validationKeyIdentifier": {
+				"keystore": "rt_profile_keys",
+				"label": "validation-encryption-1441108979471"
+			},
+			"signingOptions": {
+				"signAssertion": true,
+				"signAuthnResponse": false
+			},
+			"digestAlgorithm": "http://www.w3.org/2000/09/xmldsig#sha1",
+			"signatureAlgorithm": "http://www.w3.org/2000/09/xmldsig#rsa-sha1"
+		},
+		"identityMapping": {
+			
+		},
+		"sessionNotOnOrAfter": 3600,
+		"singleLogoutService": [{
+			"binding": "artifact",
+			"url": "https://www.mysp.ibm.com/isam/sps/saml20sp/saml20/slo"
+		},
+		{
+			"binding": "post",
+			"url": "https://www.mysp.ibm.com/isam/sps/saml20sp/saml20/slo"
+		},
+		{
+			"binding": "redirect",
+			"url": "https://www.mysp.ibm.com/isam/sps/saml20sp/saml20/slo"
+		},
+		{
+			"binding": "soap",
+			"url": "https://www.mysp.ibm.com/isam/sps/saml20sp/saml20/soap"
+		}],
+		"artifactResolutionService": [{
+			"default": true,
+			"index": 0,
+			"binding": "soap",
+			"url": "https://www.mysp.ibm.com/isam/sps/saml20sp/saml20/soap"
+		}],
+		"assertionSettings": {
+			"assertionAttributeTypes": ["*"]
+		},
+		"attributeMapping": {
+			
+		},
+		"providerId": "https://www.mysp.ibm.com/isam/sps/saml20sp/saml20",
+		"soapSettings": {
+			"serverCertValidation": {
+				"enabled": false
+			},
+			"clientAuth": {
+				"method": "none",
+				"properties": {
+					
+				}
+			}
+		},
+		"encryptionSettings": {
+			"encryptionKeyIdentifier": {
+				"keystore": "rt_profile_keys",
+				"label": "validation-encryption-1441108979471"
+			},
+			"encryptionKeyTransportAlgorithm": "http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p",
+			"encryptionOptions": {
+				"encryptNameID": false,
+				"encryptAssertion": false,
+				"encryptAssertionAttributes": false
+			},
+			"blockEncryptionAlgorithm": "http://www.w3.org/2001/04/xmlenc#aes256-cbc"
+		}
+	},
+	"name": "SP Company",
+	"enabled": true
+}

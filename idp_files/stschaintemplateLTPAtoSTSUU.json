@@ -1,0 +1,16 @@
+{
+  "description": "Maps from LTPA to STSUU",
+  "name": "LTPAToSTSUU",
+  "chainItems": [
+    {
+      "id": "default-ltpa",
+      "prefix": "10e174db-3a78-4c4f-971a-a18965f893ff",
+      "mode": "validate"
+    },
+    {
+      "id": "default-stsuu",
+      "prefix": "d3cc0b60-3c8d-4364-b082-5b9a51accc0b",
+      "mode": "issue"
+    }
+  ]
+}

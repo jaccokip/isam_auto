@@ -1,0 +1,20 @@
+{
+	"id": "dummy",
+	"chainItems": [{
+		"prefix": "uuid3dbf4c80-013d-1eac-9215-c2665e02a402",
+		"mode": "validate",
+		"id": "default-ivc"
+	},
+	{
+		"prefix": "uuid3dbf4c81-013d-1fbf-a33c-c2665e02a402",
+		"mode": "map",
+		"id": "default-map"
+	},
+	{
+		"prefix": "uuid3dbf4c82-013d-1c86-8215-c2665e02a402",
+		"mode": "issue",
+		"id": "default-saml2_0"
+	}],
+	"name": "IVCredToSAML20JunctionExample",
+	"description": "IVCred To SAML20 Junction Example"
+}

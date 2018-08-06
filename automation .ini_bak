@@ -1,0 +1,32 @@
+[common]
+platform-activation-code = 2889-D57C-0FEB-223A-D801-6177-68A9-069A
+federation-activation-code = 9A08-84CC-599A-5CC2-C4D9-ACD3-AD70-B4D6
+dns = 192.168.42.2
+ntp-server = pool.ntp.org
+static-hosts = 192.168.42.101:isam.myidp.ibm.com,192.168.42.102:www.myidp.ibm.com,192.168.42.201:isam.mysp.ibm.com,192.168.42.202:www.mysp.ibm.com
+
+[idp]
+management-host-url = https://192.168.42.101
+admin-username = admin
+admin-original-password = admin
+admin-password = Passw0rd
+easuser-original-password = passw0rd
+easuser-password = Passw0rd
+reverse-proxy-interface-ip = 192.168.42.102
+reverse-proxy-interface-mask = 255.255.255.0
+reverse-proxy-host = www.myidp.ibm.com
+management-host = isam.myidp.ibm.com
+saml-federation-name = saml20idp
+
+[sp]
+management-host-url = https://192.168.42.201
+admin-username = admin
+admin-original-password = admin
+admin-password = Passw0rd
+easuser-original-password = passw0rd
+easuser-password = Passw0rd
+reverse-proxy-interface-ip = 192.168.42.202
+reverse-proxy-interface-mask = 255.255.255.0
+reverse-proxy-host = www.mysp.ibm.com
+management-host = isam.mysp.ibm.com
+saml-federation-name = saml20sp

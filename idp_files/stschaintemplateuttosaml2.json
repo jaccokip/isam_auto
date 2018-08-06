@@ -1,0 +1,19 @@
+{
+	"description": "Maps from UsernameToken to SAML20",
+	"name": "UsernameTokenToSAML20",
+	"chainItems": [{
+		"id": "default-username",
+		"prefix": "64f01f9f-5bc3-419b-a986-da60fc28b110",
+		"mode": "validate"
+	},
+	{
+		"id": "default-map",
+		"prefix": "befbdc8d-5fdc-4cc7-99c9-871236567e87",
+		"mode": "map"
+	},
+	{
+		"id": "default-saml2_0",
+		"prefix": "c33c3fc5-fa11-4eb6-a24a-40c83cceb235",
+		"mode": "issue"
+	}]
+}

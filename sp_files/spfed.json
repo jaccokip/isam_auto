@@ -1,0 +1,116 @@
+{
+	"name": "saml20sp",
+	"protocol": "SAML2_0",
+	"role": "sp",
+	"configuration": {
+		"providerId": "https:\/\/www.mysp.ibm.com\/isam\/sps\/saml20sp\/saml20",
+		"companyName": "SP Company",
+		"pointOfContactUrl": "https:\/\/www.mysp.ibm.com\/isam\/sps",
+		"artifactLifeTime": 120,
+		"sessionTimeout": 7200,
+		"messageValidTime": 300,
+		"nameIDFormat": {
+			"supported": ["urn:oasis:names:tc:SAML:2.0:nameid-format:persistent",
+			"urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress",
+			"urn:oasis:names:tc:SAML:2.0:nameid-format:transient"],
+			"default": "urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress"
+		},
+		"signatureSettings": {
+			"signingKeyIdentifier": {
+				"keystore": "myspkeys",
+				"label": "myspkey"
+			},
+			"keyInfoElements": {
+				"includeX509CertificateData": true,
+				"includeX509SubjectName": true,
+				"includeX509SubjectKeyIdentifier": true,
+				"includeX509IssuerDetails": true,
+				"includePublicKey": true
+			},
+			"transformAlgorithmElements": {
+				"includeInclusiveNamespaces": true
+			},
+			"signingOptions": {
+				"signArtifactRequest": true,
+				"signArtifactResponse": true,
+				"signNameIDManagementRequest": true,
+				"signNameIDManagementResponse": true,
+				"signLogoutRequest": true,
+				"signLogoutResponse": true,
+				"signAuthnRequest": true
+			},
+			"validationOptions": {
+				"validateAssertion": true
+			}
+		},
+		"encryptionSettings": {
+			"decryptionKeyIdentifier": {
+				"keystore": "myspkeys",
+				"label": "myspkey"
+			}
+		},
+		"assertionConsumerService": [{
+			"index": 0,
+			"default": true,
+			"binding": "artifact",
+			"url": "https:\/\/www.mysp.ibm.com\/isam\/sps\/saml20sp\/saml20\/login"
+		},
+		{
+			"index": 1,
+			"default": false,
+			"binding": "post",
+			"url": "https:\/\/www.mysp.ibm.com\/isam\/sps\/saml20sp\/saml20\/login"
+		},
+		{
+			"index": 2,
+			"default": false,
+			"binding": "redirect",
+			"url": "https:\/\/www.mysp.ibm.com\/isam\/sps\/saml20sp\/saml20\/login"
+		}],
+		"singleLogoutService": [{
+			"binding": "artifact",
+			"url": "https:\/\/www.mysp.ibm.com\/isam\/sps\/saml20sp\/saml20\/slo"
+		},
+		{
+			"binding": "post",
+			"url": "https:\/\/www.mysp.ibm.com\/isam\/sps\/saml20sp\/saml20\/slo"
+		},
+		{
+			"binding": "redirect",
+			"url": "https:\/\/www.mysp.ibm.com\/isam\/sps\/saml20sp\/saml20\/slo"
+		},
+		{
+			"binding": "soap",
+			"url": "https:\/\/www.mysp.ibm.com\/isam\/sps\/saml20sp\/saml20\/soap"
+		}],
+		"manageNameIDService": [{
+			"binding": "artifact",
+			"url": "https:\/\/www.mysp.ibm.com\/isam\/sps\/saml20sp\/saml20\/mnids"
+		},
+		{
+			"binding": "post",
+			"url": "https:\/\/www.mysp.ibm.com\/isam\/sps\/saml20sp\/saml20\/mnids"
+		},
+		{
+			"binding": "redirect",
+			"url": "https:\/\/www.mysp.ibm.com\/isam\/sps\/saml20sp\/saml20\/mnids"
+		},
+		{
+			"binding": "soap",
+			"url": "https:\/\/www.mysp.ibm.com\/isam\/sps\/saml20sp\/saml20\/soap"
+		}],
+		"artifactResolutionService": [{
+			"index": 0,
+			"default": true,
+			"binding": "soap",
+			"url": "https:\/\/www.mysp.ibm.com\/isam\/sps\/saml20sp\/saml20\/soap"
+		}],
+		"identityMapping": {
+			"activeDelegateId": "default-map",
+			"properties": {
+				"ruleType": "JAVASCRIPT",
+				"identityMappingRuleReference": ""
+			}
+		}
+	}
+}

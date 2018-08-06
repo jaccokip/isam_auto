@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?><md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://www.myidp.ibm.com/isam/sps/saml20idp/saml20">
+<md:IDPSSODescriptor WantAuthnRequestsSigned="true" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+<md:KeyDescriptor use="signing">
+<KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+<X509Data>
+<X509Certificate>MIIB2zCCAUSgAwIBAgIIfgBZUHi/xG4wDQYJKoZIhvcNAQEFBQAwMDELMAkGA1UEBhMCdXMxETAPBgNVBAoTCHRlc3Rvbmx5MQ4wDAYDVQQDEwVteWlkcDAeFw0xNjA0MjcxMTE2NTFaFw0yNjA0MjYxMTE2NTFaMDAxCzAJBgNVBAYTAnVzMREwDwYDVQQKEwh0ZXN0b25seTEOMAwGA1UEAxMFbXlpZHAwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBALaV1rXGXgAjRiEAXUIr6jLMR+buzuaBYsnltpAlqSM6obPdpyC/jJihALTVupVMOaQ1E+ejxUUlvREFPLJX0AX1CbzIMQT0NyhB8MIpGZa+9XAte1mMnoqMyTXIgWeyxn7cbqyWMJojMwqRQg0ruqeVaORTvQ6B6kfd5VsGrK8ZAgMBAAEwDQYJKoZIhvcNAQEFBQADgYEABvUYBZWfCHS8oPZVjWae0lwMzlS0sWj4P8ikZD0Nuk+rF+xpIDr9u4277AQIgv372e00/Ndqjq/iYuHNfFPUYfu0RoLR+dh3ZNi8H5LqfG+X64Bkvhc/a28Srv6G7EvO27qN5Kl8XCMa7rU+hFucGeDtbAOp8nZ/VJoAqLR3qlc=</X509Certificate>
+</X509Data>
+</KeyInfo>
+</md:KeyDescriptor>
+<md:KeyDescriptor use="encryption">
+<KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+<X509Data>
+<X509Certificate>MIIB2zCCAUSgAwIBAgIIfgBZUHi/xG4wDQYJKoZIhvcNAQEFBQAwMDELMAkGA1UEBhMCdXMxETAPBgNVBAoTCHRlc3Rvbmx5MQ4wDAYDVQQDEwVteWlkcDAeFw0xNjA0MjcxMTE2NTFaFw0yNjA0MjYxMTE2NTFaMDAxCzAJBgNVBAYTAnVzMREwDwYDVQQKEwh0ZXN0b25seTEOMAwGA1UEAxMFbXlpZHAwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBALaV1rXGXgAjRiEAXUIr6jLMR+buzuaBYsnltpAlqSM6obPdpyC/jJihALTVupVMOaQ1E+ejxUUlvREFPLJX0AX1CbzIMQT0NyhB8MIpGZa+9XAte1mMnoqMyTXIgWeyxn7cbqyWMJojMwqRQg0ruqeVaORTvQ6B6kfd5VsGrK8ZAgMBAAEwDQYJKoZIhvcNAQEFBQADgYEABvUYBZWfCHS8oPZVjWae0lwMzlS0sWj4P8ikZD0Nuk+rF+xpIDr9u4277AQIgv372e00/Ndqjq/iYuHNfFPUYfu0RoLR+dh3ZNi8H5LqfG+X64Bkvhc/a28Srv6G7EvO27qN5Kl8XCMa7rU+hFucGeDtbAOp8nZ/VJoAqLR3qlc=</X509Certificate>
+</X509Data>
+</KeyInfo>
+<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#rsa-1_5"/>
+</md:KeyDescriptor>
+<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://www.myidp.ibm.com/isam/sps/saml20idp/saml20/soap" index="0" isDefault="true"/>
+<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://www.myidp.ibm.com/isam/sps/saml20idp/saml20/slo"/>
+<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://www.myidp.ibm.com/isam/sps/saml20idp/saml20/slo"/>
+<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://www.myidp.ibm.com/isam/sps/saml20idp/saml20/slo"/>
+<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://www.myidp.ibm.com/isam/sps/saml20idp/saml20/soap"/>
+<md:ManageNameIDService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://www.myidp.ibm.com/isam/sps/saml20idp/saml20/mnids"/>
+<md:ManageNameIDService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://www.myidp.ibm.com/isam/sps/saml20idp/saml20/mnids"/>
+<md:ManageNameIDService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://www.myidp.ibm.com/isam/sps/saml20idp/saml20/mnids"/>
+<md:ManageNameIDService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://www.myidp.ibm.com/isam/sps/saml20idp/saml20/soap"/>
+<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress</md:NameIDFormat>
+<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://www.myidp.ibm.com/isam/sps/saml20idp/saml20/login"/>
+<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://www.myidp.ibm.com/isam/sps/saml20idp/saml20/login"/>
+<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://www.myidp.ibm.com/isam/sps/saml20idp/saml20/login"/>
+</md:IDPSSODescriptor>
+<md:Organization>
+<md:OrganizationName xml:lang="en">IdP Company</md:OrganizationName>
+<md:OrganizationDisplayName xml:lang="en">IdP Company</md:OrganizationDisplayName>
+<md:OrganizationURL xml:lang="en"/>
+</md:Organization>
+</md:EntityDescriptor>
